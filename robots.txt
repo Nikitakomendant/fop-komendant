@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fop-komendant.pages.dev/sitemap.xml

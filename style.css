@@ -674,3 +674,48 @@ a:focus-visible, button:focus-visible{
 .reveal[data-delay="3"]{ transition-delay: .3s; }
 
 .js-disabled .reveal{ opacity: 1; transform: none; }
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq-list{
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+}
+.faq-question{
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--concrete);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-question::-webkit-details-marker{ display: none; }
+.faq-question::after{
+  content: '+';
+  font-family: var(--font-mono);
+  font-size: 20px;
+  color: var(--hazard);
+  flex-shrink: 0;
+  transition: transform .2s var(--ease);
+}
+.faq-item[open] .faq-question::after{ transform: rotate(45deg); }
+.faq-answer{
+  margin-top: 12px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
