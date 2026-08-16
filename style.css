@@ -383,7 +383,13 @@ a:focus-visible, button:focus-visible{
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
   box-shadow: 0 30px 60px -20px rgba(0,0,0,.55);
 }
-.hero-photo{ border-radius: 2px; width: 100%; }
+.hero-photo{
+  border-radius: 2px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
 .hero-badge{
   position: absolute;
   bottom: -22px;
